@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #00416a, #e4e5e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.calculator {
+    background-color: #222;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+    background-color: #333;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    font-size: 24px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    min-height: 28px;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: #444;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.operator {
+    background-color: #ff9500;
+    color: white;
+}
+
+.operator:hover {
+    background-color: #ffaa33;
+}
+
+.equals {
+    grid-column: span 2;
+    background-color: #2196F3;
+}
+
+.equals:hover {
+    background-color: #0d8bf2;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator-container {
+        padding: 10px;
+    }
+    
+    .display {
+        padding: 15px;
+        min-height: 100px;
+    }
+    
+    .previous-operand {
+        font-size: 1.2rem;
+    }
+    
+    .current-operand {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .btn {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .display {
+        padding: 10px;
+        min-height: 80px;
+    }
+    
+    .previous-operand {
+        font-size: 1rem;
+    }
+    
+    .current-operand {
+        font-size: 1.5rem;
+    }
+}
